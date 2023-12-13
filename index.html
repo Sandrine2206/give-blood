@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blood donation</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz@8..60&display=swap" rel="stylesheet">
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,700,0,0">
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+<script src="app.js" defer></script>
+<script src="overlay.js" defer></script>
+
+
+<header>
+    <nav id="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#weare">Who we are</a></li>
+            <li><a href="#bloodstock">Stock of each blood group</a></li>
+            <li><a href="#need">Why we need you?</a></li>
+            <li><a href="#schedule">schedule</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#data">Give your blood</a></li>
+        </ul>
+    </nav>
+
+    <div id="menu" class="material-symbols-rounded">
+        menu
+    </div>
+
+    <div id="blood" class="material-symbols-rounded">
+        bloodtype
+    </div>
+
+	<h1>Donate Blood Save Lives</h1>
+	<h2>Every dr<b>o🩸p</b> counts</h2>
+    
+</header>
+
+<section id="weare">
+    <h1>Who we are</h1>
+	<div id="pres">
+		<img src="media/coeur.png">
+		<div>
+			<p>We are a dedicated organization committed to saving lives through the selfless act of blood donation. Our organization collects blood for hospitals in Prague, and we need your support. We believe that every person has the ability to make a positive impact. Join us in this important cause, and let's work together to make a meaningful impact on the health and well-being of those who depend on donated blood.</p>
+		</div>
+	</div>
+</section>
+
+<section id="bloodstock">
+    <h1>Stock of each blood group</h1>
+    <div id="stock">
+        <div class="drop" data-text="70%"><img src="media/G1.png" alt=""></div>
+        <div class="drop" data-text="40%"><img src="media/G2.png" alt=""></div>
+        <div class="drop" data-text="15%"><img src="media/G3.png" alt=""></div>
+        <div class="drop" data-text="70%"><img src="media/G4.png" alt=""></div>
+
+        <div class="group">A+</div>
+        <div class="group">O+</div>
+        <div class="group">B+</div>
+        <div class="group">AB+</div>
+
+        <div class="drop" data-text="30%"><img src="media/G5.png" alt=""></div>
+        <div class="drop" data-text="10%"><img src="media/G6.png" alt=""></div>
+        <div class="drop" data-text="12%"><img src="media/G7.png" alt=""></div>
+        <div class="drop" data-text="11%"><img src="media/G8.png" alt=""></div>
+
+        <div class="group">A-</div>
+        <div class="group">O-</div>
+        <div class="group">B-</div>
+        <div class="group">AB-</div>
+    </div>
+    </div>
+</section>
+
+<section id="need">
+	<h1>Why we need you?</h1>
+	<div id="info">
+		<a href="#">
+			<p>Each year, 1 million patients are treated.</p>
+		</a>
+		<a href="#">
+			<p>1 hour of your time is enough to save 3 lives!</p>
+		</a>
+		<a href="#">
+			<p>Every day we need 10,000 donations.</p>
+		</a>
+        <a href="#">
+			<p>You can donate every 8 weeks.</p>
+		</a>
+	</div>
+</section>
+
+<section id="schedule">
+    <h1>Stock of each blood group</h1>
+    <table>
+        <tr>
+            <td id="day">Monday</td>
+            <td id="hour">8:00-16:00</td>
+        </tr>
+
+        <tr>
+            <td id="day">Tuesday</td>
+            <td id="hour">8:00-16:00</td>
+        </tr>
+
+        <tr>
+            <td id="day">Wednesday</td>
+            <td id="hour">09:00-14:30</td>
+        </tr> 
+
+        <tr>
+            <td id="day">Thursday</td>
+            <td id="hour">09:00-15:00</td>
+        </tr>
+
+        <tr>
+            <td id="day">Friday</td>
+            <td id="hour">8:00-16:00</td>
+        </tr>
+
+        <tr>
+            <td id="day">Saturday</td>
+            <td id="hour">Closed</td>
+        </tr>
+
+        <tr>
+            <td id="day">Sunday</td>
+            <td id="hour">Closed</td>
+        </tr>
+
+    </table>
+</section>
+
+<section id="location">
+    <h1>Location</h1>
+    <div id="mymap"></div>
+</section>
+
+<section id="data">
+    <h1>Give your blood</h1>
+    <form id="form">
+        <div>
+            <label for="sender">Name</label>
+            <input type="text" name="sender" id="sender" placeholder="Your Name" required>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="me@gmail.com" required>
+        </div>
+
+        <div>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required>
+        </div>
+
+        <div>
+            <label for="btype">Blood type</label>
+            <input type="text" id="btype" name="btype" placeholder="If you know it">
+        </div>
+
+        <div>
+            <button type="submit" id="btnsubmit">Submit</button>
+        </div>
+    </form>
+
+    <div id="response">
+        <div class="material-symbols-rounded" id="check">check</div>
+        <p>Thank you, your message has been sent</p>
+    </div>
+</section>
+
+<footer>
+    <ul>
+        <li><a href=""><img src="media/icon-facebook.svg"></a></li>
+        <li><a href=""><img src="media/icon-instagram.svg"></a></li>
+        <li><a href=""><img src="media/icon-twitter.svg"></a></li>
+        <li><a href=""><img src="media/icon-youtube.svg"></a></li>
+    </ul>
+</footer>
